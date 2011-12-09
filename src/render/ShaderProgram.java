@@ -288,4 +288,18 @@ public class ShaderProgram {
 
 		return shader;
 	}
+
+	public static ShaderProgram getSix() {
+		String vertex = getString("Shaders/Slisesix/vertex.shader");
+		String fragment = getString("Shaders/Slisesix/fragment.shader");
+		VertexShader vert = new VertexShader("Vertex Shader", vertex);
+		FragmentShader frag = new FragmentShader("Fragment Shader", fragment);
+		ShaderProgram shader = new ShaderProgram("Screen Blend Shader Shader");
+		shader.attach(vert);
+		shader.attach(frag);
+		shader.link();
+		System.out.println(shader.getInfo(9999999));
+
+		return shader;
+	}
 }

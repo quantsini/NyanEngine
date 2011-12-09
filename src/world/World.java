@@ -138,10 +138,10 @@ public class World {
 
 		normalBuffer = new TextureBuffer(800, 600, GL11.GL_RGBA,
 				GL11.GL_UNSIGNED_BYTE, false, (FloatBuffer) null);
-		
+
 		dofBuffer = new TextureBuffer(800, 600, GL11.GL_RGBA,
 				GL11.GL_UNSIGNED_BYTE, false, (FloatBuffer) null);
-		
+
 		screenBuffer.bindTexturePoint();
 		depthBuffer.bindTexturePoint();
 		normalBuffer.bindTexturePoint();
@@ -227,7 +227,7 @@ public class World {
 		for (PhysicsEntity<? extends RenderEntity> e : entities) {
 			RenderEntity re = e.getWorldEntity();
 			if (re.castShadows) {
-				//re.render(volumeShadowContext);
+				re.render(volumeShadowContext);
 			}
 		}
 
@@ -237,7 +237,7 @@ public class World {
 		for (PhysicsEntity<? extends RenderEntity> e : entities) {
 			RenderEntity re = e.getWorldEntity();
 			if (re.castShadows) {
-				//re.render(volumeShadowContext);
+				re.render(volumeShadowContext);
 			}
 		}
 	}
@@ -336,7 +336,7 @@ public class World {
 		dofContext.uniform1f("offset", 18.0f);
 		dofContext.uniform1f("falloff", 0.2f);
 		dofContext.uniform1f("rad", 0.006f);
-		
+
 		postprocessScreen(screenBuffer, depthBuffer, normalBuffer, dofContext);
 		dofBuffer.copyPixels();
 
@@ -401,7 +401,6 @@ public class World {
 		finalRenderToTexture();
 
 		drawPostProcessing();
-		
-		
+
 	}
 }
