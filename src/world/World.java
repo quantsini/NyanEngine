@@ -30,29 +30,71 @@ import com.bulletphysics.dynamics.constraintsolver.SequentialImpulseConstraintSo
 import debug.HelperDebug;
 
 public class World {
+	/**
+	 */
 	private ArrayList<PhysicsEntity<? extends RenderEntity>> entities;
+	/**
+	 */
 	private Camera currentCam;
+	/**
+	 */
 	private CollisionConfiguration collisionConfiguration;
+	/**
+	 */
 	private Dispatcher dispatcher;
+	/**
+	 */
 	private DynamicsWorld dynamicsWorld;
 
+	/**
+	 */
 	private ShaderContext phongShadowContext;
+	/**
+	 */
 	private ShaderContext volumeShadowContext;
+	/**
+	 */
 	private ShaderContext dofContext;
+	/**
+	 */
 	private ShaderContext passThruContext;
+	/**
+	 */
 	private ShaderContext screenSpaceNormalDepthContext;
+	/**
+	 */
 	private ShaderContext screenContext;
+	/**
+	 */
 	private ShaderContext blurContext;
+	/**
+	 */
 	private ShaderContext gammaContext;
 
+	/**
+	 */
 	private TextureBuffer screenBuffer;
+	/**
+	 */
 	private TextureBuffer depthBuffer;
+	/**
+	 */
 	private TextureBuffer normalBuffer;
+	/**
+	 */
 	private TextureBuffer tempMarble;
+	/**
+	 */
 	private TextureBuffer blurBuffer;
+	/**
+	 */
 	long time = 0;
 
+	/**
+	 */
 	private HelperDebug debug = new HelperDebug();
+	/**
+	 */
 	private TextureBuffer dofBuffer;
 
 	public World() {

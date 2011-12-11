@@ -4,9 +4,17 @@ import java.util.*;
 import org.jblas.*;
 
 public class Vertex {
+	/**
+	 */
 	private DoubleMatrix position;
+	/**
+	 */
 	private DoubleMatrix normal;
+	/**
+	 */
 	private Set<Triangle> boundTriangles;
+	/**
+	 */
 	private boolean normalized;
 
 	public Vertex(double x, double y, double z, double nx, double ny, double nz) {

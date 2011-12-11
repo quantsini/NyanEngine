@@ -5,9 +5,17 @@ import com.bulletphysics.dynamics.RigidBodyConstructionInfo;
 import com.bulletphysics.linearmath.Transform;
 
 public class PhysicsEntity<WE extends RenderEntity> {
+	/**
+	 */
 	private WE theEntity;
+	/**
+	 */
 	private RigidBody bodyEntity;
+	/**
+	 */
 	float[] m = new float[16];
+	/**
+	 */
 	Transform trans = new Transform();
 
 	public PhysicsEntity(WE ent, RigidBodyConstructionInfo rbInfo) {

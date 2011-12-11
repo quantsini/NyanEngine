@@ -12,14 +12,32 @@ import render.ShaderContext;
 import render.Material;
 
 public abstract class RenderEntity {
+	/**
+	 */
 	private FloatMatrix localOrigin;
+	/**
+	 */
 	private FloatMatrix glMatrix;
+	/**
+	 */
 	private String name;
+	/**
+	 */
 	private Set<RenderEntity> anchorList;
+	/**
+	 */
 	private boolean spawned;
+	/**
+	 */
 	public boolean castShadows;
+	/**
+	 */
 	public boolean receiveShadows;
+	/**
+	 */
 	private FloatBuffer tempBuff;
+	/**
+	 */
 	private Material material;
 
 	public RenderEntity(String n) {
@@ -78,6 +96,9 @@ public abstract class RenderEntity {
 		throw new RuntimeException("nope");
 	}
 
+	/**
+	 * @param pos
+	 */
 	public void setLocalOrigin(FloatMatrix pos) {
 		localOrigin = pos.dup();
 	}

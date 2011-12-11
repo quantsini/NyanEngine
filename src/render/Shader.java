@@ -3,9 +3,17 @@ package render;
 import org.lwjgl.opengl.GL20;
 
 public abstract class Shader {
+	/**
+	 */
 	protected int shaderID;
+	/**
+	 */
 	private boolean isCompiled;
+	/**
+	 */
 	private boolean canCompile;
+	/**
+	 */
 	private String name;
 
 	public Shader(String n) {
@@ -14,6 +22,9 @@ public abstract class Shader {
 		isCompiled = false;
 	}
 	
+	/**
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
@@ -56,6 +67,9 @@ public abstract class Shader {
 		}
 	}
 
+	/**
+	 * @return
+	 */
 	public int getShaderID() {
 		return shaderID;
 	}

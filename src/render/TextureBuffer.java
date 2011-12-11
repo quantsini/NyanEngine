@@ -10,12 +10,26 @@ import org.newdawn.slick.opengl.Texture;
 import debug.HelperDebug;
 
 public class TextureBuffer {
+	/**
+	 */
 	private HelperDebug d = new HelperDebug();
+	/**
+	 */
 	private int texID;
+	/**
+	 */
 	private int boundTextureLocation;
+	/**
+	 */
 	private int format;
+	/**
+	 */
 	private int dataType;
+	/**
+	 */
 	private int width;
+	/**
+	 */
 	private int height;
 	private static int boundTexturePointer = 0;
 	private static int MAX_TEXTURE_BIND_POINTS = 30;

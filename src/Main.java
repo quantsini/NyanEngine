@@ -38,34 +38,80 @@ import com.bulletphysics.linearmath.Transform;
 import javax.vecmath.Vector3f;
 
 public class Main {
+	/**
+	 */
 	debug.HelperDebug d = new debug.HelperDebug();
+	/**
+	 */
 	PhysicsEntity<? extends RenderableMesh> obj;
+	/**
+	 */
 	PhysicsEntity<? extends RenderableMesh> floor;
 
+	/**
+	 */
 	TriangleMesh pillarMesh;
+	/**
+	 */
 	Camera cam;
+	/**
+	 */
 	World world;
+	/**
+	 */
 	double x = 0;
+	/**
+	 */
 	int maxFrameRate = 60;
 
+	/**
+	 */
 	float cameraYRot = 0;
+	/**
+	 */
 	float cameraXRot = 20;
 
+	/**
+	 */
 	FloatBuffer temp = BufferUtils.createFloatBuffer(4);
 
+	/**
+	 */
 	float[] lightAmbient = { 0.1f, 0.18f, 0.21f, 1f };
+	/**
+	 */
 	float[] lightDiffuse = { 1f, 1f, 1f, 1f };
+	/**
+	 */
 	float[] lightPos = new float[4];
 
+	/**
+	 */
 	Transform trans = new Transform();
+	/**
+	 */
 	DoubleMatrix camPos = new DoubleMatrix(3);
+	/**
+	 */
 	DoubleMatrix camEuler = new DoubleMatrix(3);
+	/**
+	 */
 	FloatMatrix force = new FloatMatrix(2);
+	/**
+	 */
 	FloatMatrix rotMat = new FloatMatrix(2, 2);
 
+	/**
+	 */
 	long lastFPS = getTime();
+	/**
+	 */
 	long fps;
+	/**
+	 */
 	private TriangleMesh cowMesh;
+	/**
+	 */
 	private int selectedController = -1;
 
 	public void gameLogicTick(long dt) {
@@ -241,7 +287,11 @@ public class Main {
 
 	}
 
+	/**
+	 */
 	float[] dst = new float[16];
+	/**
+	 */
 	private PhysicsEntity<Light> lightMarker;
 
 	public void physicsTick(long dt) {

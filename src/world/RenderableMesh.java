@@ -11,17 +11,31 @@ import render.Material;
 import render.ShaderContext;
 
 public abstract class RenderableMesh extends RenderEntity {
+	/**
+	 */
 	private Material mat;
+	/**
+	 */
 	protected Mesh mesh;
 
+	/**
+	 */
 	FloatBuffer diffuse = arrToFloatBuffer(new float[] { 0.3f, 0.9f, 0.8f, 1.0f });
 
+	/**
+	 */
 	FloatBuffer specular = arrToFloatBuffer(new float[] { 1f, 1f, 1f, 1f });
 
+	/**
+	 */
 	FloatBuffer ambient = arrToFloatBuffer(new float[] { 0.4f, 0.4f, 0.4f, 1f });
 
+	/**
+	 */
 	float shininess = 30;
 
+	/**
+	 */
 	private FloatBuffer tempBuffer;
 
 	public RenderableMesh(String n, Mesh m) {

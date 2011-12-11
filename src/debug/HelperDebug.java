@@ -6,6 +6,8 @@ import org.lwjgl.util.glu.GLU;
 public class HelperDebug {
 
 
+	/**
+	 */
 	int lastErr = -1;
 
 	public void checkOpenGLError(String msg) {

@@ -11,11 +11,23 @@ import geometry.Mesh;
 import geometry.Vertex;
 
 public class Box extends Mesh {
+	/**
+	 */
 	private float width;
+	/**
+	 */
 	private float height;
+	/**
+	 */
 	private float depth;
+	/**
+	 */
 	private int repeatNum;
+	/**
+	 */
 	private int bufferType = GL11.GL_QUADS;
+	/**
+	 */
 	boolean vboNeedsUpdate;
 
 	public Box(String n, int sp, float w, float h, float d) {

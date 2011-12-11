@@ -3,9 +3,17 @@ package geometry;
 import org.lwjgl.opengl.GL15;
 
 public abstract class Mesh {
+	/**
+	 */
 	protected int vboID;
+	/**
+	 */
 	protected int tboID;
+	/**
+	 */
 	protected int nboID;
+	/**
+	 */
 	private String name;
 
 	public Mesh(String n) {

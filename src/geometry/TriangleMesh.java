@@ -7,11 +7,23 @@ import org.lwjgl.*;
 import org.lwjgl.opengl.*;
 
 public class TriangleMesh extends Mesh {
+	/**
+	 */
 	private Set<Vertex> vertices;
+	/**
+	 */
 	private Set<Line> lines;
+	/**
+	 */
 	private Set<Triangle> triangles;
+	/**
+	 */
 	private boolean vboNeedsUpdate;
+	/**
+	 */
 	private int bufferType = GL32.GL_TRIANGLES_ADJACENCY;
+	/**
+	 */
 	float scale = 1;
 
 	public Set<Line> lines() {

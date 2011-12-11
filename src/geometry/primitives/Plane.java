@@ -13,10 +13,20 @@ import geometry.Vertex;
 import geometry.Mesh;
 
 public class Plane extends Mesh {
+	/**
+	 */
 	private boolean vboNeedsUpdate;
+	/**
+	 */
 	private int bufferType = GL11.GL_QUADS;
+	/**
+	 */
 	private int subdivision;
+	/**
+	 */
 	private float width;
+	/**
+	 */
 	private float height;
 
 	public Plane(String n, int sd, float w, float h) {

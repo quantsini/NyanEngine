@@ -7,15 +7,33 @@ import java.util.Map.Entry;
 import world.Camera;
 
 public class ShaderContext {
+	/**
+	 */
 	private ShaderProgram mainProgram;
 	// public final ArrayList<ShaderProgram> auxPrograms;
+	/**
+	 */
 	private FloatBuffer projectionMatrix;
+	/**
+	 */
 	private FloatBuffer modelViewMatrix;
+	/**
+	 */
 	private FloatBuffer normalMatrix;
+	/**
+	 */
 	private Hashtable<String, Float> floatUniforms;
+	/**
+	 */
 	private Hashtable<String, Integer> integerUniforms;
+	/**
+	 */
 	private Hashtable<String, float[]> floatvUniforms;
+	/**
+	 */
 	private String name;
+	/**
+	 */
 	private float time;
 
 	public ShaderContext(String n, ShaderProgram shader) {
@@ -31,6 +49,9 @@ public class ShaderContext {
 		setProjectionMatrix(cam.getProjMatrix());
 	}
 
+	/**
+	 * @param m
+	 */
 	public void setProjectionMatrix(FloatBuffer m) {
 		projectionMatrix = m;
 		if (mainProgram.isAttached()) {
@@ -44,6 +65,9 @@ public class ShaderContext {
 		}
 	}
 
+	/**
+	 * @param m
+	 */
 	public void setModelViewMatrix(FloatBuffer m) {
 		modelViewMatrix = m;
 		if (mainProgram.isAttached()) {

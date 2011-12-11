@@ -9,10 +9,20 @@ import org.lwjgl.util.glu.GLU;
 import render.ShaderContext;
 
 public class Camera extends RenderEntity {
+	/**
+	 */
 	public float fov;
+	/**
+	 */
 	public float aspect;
+	/**
+	 */
 	public float znear;
+	/**
+	 */
 	public float zfar;
+	/**
+	 */
 	private FloatBuffer projMatrix;
 
 	public Camera(String n, float fov, float aspect, float znear, float zfar) {
@@ -35,6 +45,9 @@ public class Camera extends RenderEntity {
 		GL11.glGetFloat(GL11.GL_PROJECTION_MATRIX, projMatrix);
 	}
 
+	/**
+	 * @return
+	 */
 	public FloatBuffer getProjMatrix() {
 		return projMatrix;
 	}

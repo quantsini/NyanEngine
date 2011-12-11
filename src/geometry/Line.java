@@ -3,6 +3,8 @@ package geometry;
 import java.util.Vector;
 
 public class Line {
+	/**
+	 */
 	private Vector<Vertex> vertices;
 
 	public Line(Vertex v1, Vertex v2) {

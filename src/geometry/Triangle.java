@@ -7,10 +7,20 @@ import java.util.Vector;
 import org.jblas.DoubleMatrix;
 
 public class Triangle {
+	/**
+	 */
 	private Vector<Vertex> vertices;
+	/**
+	 */
 	private Set<Line> lines;
+	/**
+	 */
 	private DoubleMatrix faceNormal;
+	/**
+	 */
 	private DoubleMatrix centerPosition;
+	/**
+	 */
 	private Set<Triangle> adjacentTriangles;
 
 	public Triangle(Vertex v1, Vertex v2, Vertex v3) {

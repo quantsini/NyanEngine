@@ -9,8 +9,14 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL31;
 
 public class ShaderProgram {
+	/**
+	 */
 	private String name;
+	/**
+	 */
 	private int shaderProgramID;
+	/**
+	 */
 	private boolean linked;
 
 	public ShaderProgram(String n) {
@@ -19,6 +25,9 @@ public class ShaderProgram {
 		linked = false;
 	}
 
+	/**
+	 * @return
+	 */
 	public int getShaderProgramID() {
 		return shaderProgramID;
 	}
@@ -66,6 +75,9 @@ public class ShaderProgram {
 		}
 	}
 
+	/**
+	 * @return
+	 */
 	public boolean isLinked() {
 		return linked;
 	}
