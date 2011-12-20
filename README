@@ -1,0 +1,13 @@
+This is my final project for CprE 557: Computer Graphics and Geometric Modelling.
+It is a survey of modern rendering techniques used in modern 3D graphics engine.
+The goal is to learn OpenGL Shaders through these techniques. This project uses jBullet for physics, and reads STL files for models.
+Techniques used:
+* Depth of Field
+* Shadow Volume Shadows
+* Postprocessing effects
+   - Bloom
+   - Gaussian Blur
+   - Gamma Correction
+
+The code could be better refactored, and some parts could be rewritten or renamed to better describe the function of each class.
+Main.java contains the entry point, and World.java contains the rendering code as well as physics simulation.
